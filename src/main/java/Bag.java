@@ -5,6 +5,7 @@
  * 1. Introduction to Java helpful.
  */
 
+import java.util.Arrays;
 public abstract class Bag {
     /*
      * TODO: Create the following private instance variables
@@ -35,7 +36,7 @@ public abstract class Bag {
         this.color = color;
         this.capacity = capacity;
         this.numberOfContents = 0;
-        this.contents = new Bag[];
+        this.contents = new String[capacity];
     }
 
 
