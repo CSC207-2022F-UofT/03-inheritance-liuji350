@@ -114,9 +114,9 @@ public abstract class Bag {
             String a = this.contents[this.numberOfContents - 1];
             this.contents[this.numberOfContents - 1] = null;
             return a;
-        }else{
-            return null;
         }
+
+        return null;
 
     }
 
