@@ -50,13 +50,13 @@ public abstract class Bag {
      *           - getCapacity
      */
     public String getColor() {
-        return color;
+        return this.color;
     }
     public int getNumberOfContents() {
-        return numberOfContents;
+        return this.numberOfContents;
     }
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 
 
@@ -86,8 +86,8 @@ public abstract class Bag {
      */
     public Boolean addItem(String itemInBag) {
         if (this.numberOfContents < this.capacity) {
-            this.contents[this.capacity - this.getNumberOfContents()] = itemInBag;
-            this.getNumberOfContents() += 1;
+            this.contents[this.capacity - this.numberOfContents] = itemInBag;
+            this.numberOfContents += 1;
 
             return true;
         }else{
