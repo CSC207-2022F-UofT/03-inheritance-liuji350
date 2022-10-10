@@ -110,8 +110,12 @@ public abstract class Bag {
      * @return
      */
     public String popItem() {
-        if (this.contents.length > 0) {
-            this.contents.set();
+        if (this.numberOfContents > 0) {
+            String a = this.contents[this.numberOfContents - 1];
+            this.contents[this.numberOfContents - 1] = null;
+            return a;
+        }else{
+            return null;
         }
 
     }
@@ -127,6 +131,11 @@ public abstract class Bag {
      */
     public void increaseCapacity(int n) {
         // TODO: Implement this method.
+        String[] newContents = new String[this.capacity + n];
+        for (int i = 0; i < this.capacity; i++){
+            newContents[i] = this.contents[i];
+
+        }
 
     }
 
